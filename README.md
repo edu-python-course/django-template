@@ -53,10 +53,10 @@ pip install -r requirements.txt
 This project comes with a minimal list of dependencies. You can easily install
 them using the command above. Here is some detail information on the deps list:
 
-| Package  | Version | Package homepage           |
-|:---------|:-------:|:---------------------------|
-| Django   |  4.1.3  | https://djangoproject.com/ |
-| psycopg2 |  2.9.5  | https://www.psycopg.org/   |
+| Package         | Version | Package homepage           |
+|:----------------|:-------:|:---------------------------|
+| Django          |  4.1.5  | https://djangoproject.com/ |
+| psycopg2-binary |  2.9.5  | https://www.psycopg.org/   |
 
 Django
 : Django is a high-level Python web framework that encourages rapid development
@@ -68,19 +68,10 @@ psycopg
 : Psycopg is the most popular PostgreSQL adapter for the Python programming
 language. Its core is a complete implementation of the Python DB API 2.0
 specifications. Several extensions allow access to many of the features
-offered by PostgreSQL.
-
-The `psycopg` library has its own prerequisites and the installation will fail
-in case your system does not meet them. For more information on requirements
-visit [psycopg docs](https://www.psycopg.org/docs/install.html#prerequisites).
-There is a `psycopg2-binary` which can be used instead of the `psycopg2`. This
-package is meant for beginners to start playing with Python and PostgreSQL
-without the need to meet the build requirements. This is not for **production**
-environment, but it's ok to use it while learning Django. To install deps do:
-
-```shell
-pip install psycopg2-binary
-```
+offered by PostgreSQL. `psycopg2-binary` is meant for beginners to start
+playing with Python and postgres without need to meet build requirements
+for `psycopg2` package. However, you should not use it on production. But it
+will suit the training  project needs.
 
 ## Starting Django Project
 
@@ -190,7 +181,7 @@ The pre-defined credentials to connect pgAdmin are:
 
 While connecting to the PostgreSQL server via pgAdmin the alias for the db
 container is "postgresql-server". This connection is already defined in the
-servers.json file.
+"pgadmin.config.json" file.
 
 Note this may take some time to set up container and run internal server.
 
@@ -212,5 +203,5 @@ your first step with learning Django framework.
 - [ ] Do the things
 - [ ] Push working branch to the remote repository
 - [ ] Create pull request to merge new feature into the trunk
-- [ ] Wait for PR rapprochement
+- [ ] Wait for PR approve
 - [ ] Merge it

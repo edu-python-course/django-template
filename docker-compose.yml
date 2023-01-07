@@ -26,6 +26,8 @@ services:
       - "${PGADMIN_PORT:-5050}:80"
     volumes:
       - ./pgadmin.config.json:/pgadmin4/servers.json:ro
+    depends_on:
+      - db
     links:
       - "db:postgresql-server"
 

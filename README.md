@@ -55,7 +55,7 @@ them using the command above. Here is some detail information on the deps list:
 
 | Package         | Version | Package homepage           |
 |:----------------|:-------:|:---------------------------|
-| Django          |  4.1.3  | https://djangoproject.com/ |
+| Django          |  4.1.5  | https://djangoproject.com/ |
 | psycopg2-binary |  2.9.5  | https://www.psycopg.org/   |
 
 Django
@@ -181,7 +181,7 @@ The pre-defined credentials to connect pgAdmin are:
 
 While connecting to the PostgreSQL server via pgAdmin the alias for the db
 container is "postgresql-server". This connection is already defined in the
-servers.json file.
+"pgadmin.config.json" file.
 
 Note this may take some time to set up container and run internal server.
 
@@ -203,5 +203,5 @@ your first step with learning Django framework.
 - [ ] Do the things
 - [ ] Push working branch to the remote repository
 - [ ] Create pull request to merge new feature into the trunk
-- [ ] Wait for PR rapprochement
+- [ ] Wait for PR approve
 - [ ] Merge it

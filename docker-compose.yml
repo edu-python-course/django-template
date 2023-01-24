@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   db:
-    image: postgres
+    image: postgres:15.1
     container_name: postgres
     restart: unless-stopped
     environment:
@@ -15,7 +15,7 @@ services:
       - db:/var/lib/postgresql/data
 
   pgadmin:
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:6.18
     container_name: pgadmin
     restart: unless-stopped
     environment:
@@ -25,6 +25,7 @@ services:
     ports:
       - "${PGADMIN_PORT:-5050}:80"
     volumes:
+      - pgadmin:/var/lib/pgadmin
       - ./pgadmin.config.json:/pgadmin4/servers.json:ro
     depends_on:
       - db

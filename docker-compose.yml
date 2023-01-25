@@ -6,13 +6,12 @@ services:
     container_name: postgres
     restart: unless-stopped
     environment:
-      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-      - PGDATA=/var/lib/postgresql/data
     ports:
       - "${POSTGRES_PORT:-5432}:5432"
     volumes:
       - db:/var/lib/postgresql/data
+      - ./docker/db:/docker-entrypoint-init.d:ro
 
   pgadmin:
     image: dpage/pgadmin4:6.18
@@ -26,7 +25,7 @@ services:
       - "${PGADMIN_PORT:-5050}:80"
     volumes:
       - pgadmin:/var/lib/pgadmin
-      - ./pgadmin.config.json:/pgadmin4/servers.json:ro
+      - ./docker/pgadmin/servers.json:/pgadmin4/servers.json:ro
     depends_on:
       - db
     links:

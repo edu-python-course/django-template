@@ -181,7 +181,8 @@ The pre-defined credentials to connect pgAdmin are:
 
 While connecting to the PostgreSQL server via pgAdmin the alias for the db
 container is "postgresql-server". This connection is already defined in the
-"pgadmin.config.json" file.
+"servers.json" file under the "docker" directory and there is no need to it
+connect manually.
 
 Note this may take some time to set up container and run internal server.
 

@@ -1,7 +1,9 @@
 name: Auto Assign
+
 on:
   pull_request:
     types: [opened]
+
 jobs:
   run:
     runs-on: ubuntu-latest

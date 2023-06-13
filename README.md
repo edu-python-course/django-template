@@ -55,8 +55,8 @@ them using the command above. Here is some detail information on the deps list:
 
 | Package         | Version | Package homepage           |
 |:----------------|:-------:|:---------------------------|
-| Django          |  4.1.5  | https://djangoproject.com/ |
-| psycopg2-binary |  2.9.5  | https://www.psycopg.org/   |
+| Django          |  4.2.2  | https://djangoproject.com/ |
+| psycopg2-binary |  2.9.6  | https://www.psycopg.org/   |
 
 Django
 : Django is a high-level Python web framework that encourages rapid development
@@ -85,6 +85,8 @@ Make sure you have postgres server running and available over your network.
 Adjust **settings.py** module to set postgres as your default database backend.
 Note, that you need to have `psycopg2` package installed in your environment to
 use PostgreSQL as a database backend.
+
+Adjust the actual value to meet your database setup.
 
 ```python
 DATABASE = {
@@ -194,14 +196,14 @@ your first step with learning Django framework.
 ### Project set up
 
 - [ ] Create local virtual environment
-- [ ] Install base dependencies for requirements file
+- [ ] Install base dependencies from the requirements file or manually
 - [ ] Start new Django project
-- [ ] Update README file with the information relevant for the project
+- [ ] Update README file with the information relevant for your project
 
 ### Delivering feature into the code base
 
 - [ ] Switch to a newly created branch
-- [ ] Do the things
+- [ ] Do the things...
 - [ ] Push working branch to the remote repository
 - [ ] Create pull request to merge new feature into the trunk
 - [ ] Wait for PR approve

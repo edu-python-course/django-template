@@ -155,9 +155,10 @@ by using `POSTGRES_PORT` environment variable.
 
 The pre-defined credentials are:
 
-*username =* postgres
-
-*password =* postgres
+| Option   | Value    |
+|:---------|:---------|
+| username | postgres |
+| password | postgres |
 
 You can run this service separately from other services defined in the compose
 file by:
@@ -173,13 +174,15 @@ uses a web-based UI running in your web browser. The pgAdmin container exposes
 its 80-port to the host machine. By default, this port is mapped to 5050. In
 case you have already 5050-port occupied by other software, you may set up any
 available port by using `PGADMIN_PORT` environment variable. After running
-the pgAdmin visit http://localhost:${PGADMIN_PORT} in your web browser.
+the pgAdmin visit http://localhost:5050 in your web browser (adjust the port
+number if needed).
 
 The pre-defined credentials to connect pgAdmin are:
 
-*email =* pgadmin@pgadmin.org
-
-*password =* pgadmin
+| Option   | Value                         |
+|:---------|:------------------------------|
+| email    | pgadmin@edu-python-course.org |
+| password | pgadmin                       | 
 
 While connecting to the PostgreSQL server via pgAdmin the alias for the db
 container is "postgresql-server". This connection is already defined in the
@@ -217,8 +220,8 @@ file by:
 docker compose up -d static
 ```
 
-After running the container visit http://localhost:${STATIC_PORT} in your web
-browser.
+After running the container visit http://localhost:8000 in your web browser
+(adjust the port number if needed).
 
 ## Check Lists
 

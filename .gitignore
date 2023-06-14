@@ -22,3 +22,7 @@ pgdata/
 pgsql/
 *.sqlite3
 *.db
+
+# static files storage
+/static/*
+!/static/index.html

@@ -1,6 +1,17 @@
 version: "3.9"
 
 services:
+
+  static:
+    image: nginx
+    container_name: static
+    restart: unless-stopped
+    ports:
+      - "${STATIC_PORT:-8000}:80"
+    volumes:
+      - ./static:/usr/share/nginx/:ro
+      - ./docker/static:/etc/nginx/conf.d/:ro
+
   db:
     image: postgres
     container_name: postgres

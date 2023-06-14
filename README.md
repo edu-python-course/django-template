@@ -119,11 +119,11 @@ The compose file defines a minimalistic set of database server and GUI client
 running in individual containers. You need to map ports from your machine to
 docker containers to get things working well. Default mapped ports are:
 
-* 5432 for the postgres service
-* 5050 for the pgadmin service
+* 5432 for the `postgres` service
+* 5050 for the `pgadmin` service
+* 8000 for the `static` service
 
-You can change these values by modifying `POSTGRES_PORT` and/or `PGADMIN_PORT`
-environment variables.
+You can change these values by modifying environment variables.
 
 The containers management is simple as:
 
@@ -187,6 +187,38 @@ container is "postgresql-server". This connection is already defined in the
 connect manually.
 
 Note this may take some time to set up container and run internal server.
+
+### Nginx
+
+Nginx (pronounced "engine-x") is a popular open-source web server and reverse
+proxy server. It is designed to handle high concurrency, provide fast and
+efficient delivery of web content, and offer various features for web
+application deployment and performance optimization.
+
+This container has been added to serve any static file via HTTP and simulate
+production environment. The container exposes its 80-port to the host machine.
+By default, this port is mapped to 8000. In case you have already 8000-port
+occupied by other software, you may set up any available port by using
+`STATIC_PORT` environment variable.
+
+Local storage for static files is "static" directory. Place your content to
+it, and it will appear available at http://localhost:8000/path/to/file.
+This directory can be used as `STATIC_ROOT` setting during development:
+
+```python
+# noinspection PyUnresolvedReferences
+STATIC_ROOT = BASE_DIR / "static"
+```
+
+You can run this service separately from other services defined in the compose
+file by:
+
+```shell
+docker compose up -d static
+```
+
+After running the container visit http://localhost:${STATIC_PORT} in your web
+browser.
 
 ## Check Lists
 

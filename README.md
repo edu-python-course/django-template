@@ -92,11 +92,11 @@ Adjust the actual value to meet your database setup.
 DATABASE = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "DATABASE_NAME",
-        "HOST": "POSTGRESQL_HOST",
-        "PORT": "POSTGRESQL_PORT",
-        "USER": "POSTGRESQL_USER",
-        "PASSWORD": "POSTGRESQL_PASSWORD",
+        "NAME": "DATABASE_NAME",  # e.g. "ecommerce", "blog_site", "taskboard"
+        "HOST": "POSTGRESQL_HOST",  # e.g. "localhost", "postgresql.server.com"
+        "PORT": "POSTGRESQL_PORT",  # e.g. "5432", 12345
+        "USER": "POSTGRESQL_USER",  # e.g. "johndoe", "foobar"
+        "PASSWORD": "POSTGRESQL_PASSWORD",  # e.g. "123456", "qwerty"
     }
 }
 ```

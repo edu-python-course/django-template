@@ -121,7 +121,7 @@ docker containers to get things working well. Default mapped ports are:
 
 * 5432 for the `postgres` service
 * 5050 for the `pgadmin` service
-* 8000 for the `static` service
+* 8080 for the `static` service
 
 You can change these values by modifying environment variables.
 
@@ -205,7 +205,7 @@ occupied by other software, you may set up any available port by using
 `STATIC_PORT` environment variable.
 
 Local storage for static files is "static" directory. Place your content to
-it, and it will appear available at http://localhost:8000/path/to/file.
+it, and it will appear available at http://localhost:8080/path/to/file.
 This directory can be used as `STATIC_ROOT` setting during development:
 
 ```python
@@ -220,7 +220,7 @@ file by:
 docker compose up -d static
 ```
 
-After running the container visit http://localhost:8000 in your web browser
+After running the container visit http://localhost:8080 in your web browser
 (adjust the port number if needed).
 
 ## Check Lists

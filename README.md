@@ -55,7 +55,7 @@ them using the command above. Here is some detail information on the deps list:
 
 | Package         | Version | Package homepage           |
 |:----------------|:-------:|:---------------------------|
-| Django          |  4.2.2  | https://djangoproject.com/ |
+| Django          |  4.2.3  | https://djangoproject.com/ |
 | psycopg2-binary |  2.9.6  | https://www.psycopg.org/   |
 
 Django

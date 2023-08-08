@@ -55,8 +55,8 @@ them using the command above. Here is some detail information on the deps list:
 
 | Package         | Version | Package homepage           |
 |:----------------|:-------:|:---------------------------|
-| Django          |  4.2.3  | https://djangoproject.com/ |
-| psycopg2-binary |  2.9.6  | https://www.psycopg.org/   |
+| Django          |   ^4    | https://djangoproject.com/ |
+| psycopg2-binary |  ^2.9   | https://www.psycopg.org/   |
 
 Django
 : Django is a high-level Python web framework that encourages rapid development

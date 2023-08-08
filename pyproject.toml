@@ -5,12 +5,11 @@ description = "the django training project template"
 authors = ["Serhii Horodilov <sgorodil@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "django_template"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-Django = "^4.2.2"
-psycopg2-binary = "^2.9.6"
+Django = "^4"
+psycopg2-binary = "^2.9"
 
 [build-system]
 requires = ["poetry-core"]

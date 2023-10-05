@@ -2,10 +2,14 @@ name: Auto Assign
 
 on:
   pull_request:
-    types: [opened]
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
 
 jobs:
-  run:
+  assign:
     runs-on: ubuntu-latest
     steps:
       - uses: wow-actions/auto-assign@v1

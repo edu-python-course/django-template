@@ -1,7 +1,7 @@
 # DJANGO PROJECT TEMPLATE
 
-DISCLAIMER: this repository will help you to set up your environment for the
-development, but you definitely should be able to do it yourself.
+_**DISCLAIMER**: this repository will help you to set up your environment for
+the development, but you definitely should be able to do it yourself._
 
 This repository's purpose is to help newcomers to get their first Django
 project ready for the development as soon as possible. It has some minimalistic
@@ -155,10 +155,9 @@ by using `POSTGRES_PORT` environment variable.
 
 The pre-defined credentials are:
 
-| Option   | Value    |
+| Username | Password |
 |:---------|:---------|
-| username | postgres |
-| password | postgres |
+| postgres | postgres |
 
 You can run this service separately from other services defined in the compose
 file by:
@@ -179,10 +178,9 @@ number if needed).
 
 The pre-defined credentials to connect pgAdmin are:
 
-| Option   | Value                         |
-|:---------|:------------------------------|
-| email    | pgadmin@edu-python-course.org |
-| password | pgadmin                       | 
+| Email                         | Password |
+|:------------------------------|:---------|
+| pgadmin@edu-python-course.org | pgadmin  |
 
 While connecting to the PostgreSQL server via pgAdmin the alias for the db
 container is "postgresql-server". This connection is already defined in the

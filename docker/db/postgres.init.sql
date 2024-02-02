@@ -1,6 +1,6 @@
 /* put database initialization script here */
 
--- for example
+-- example
 CREATE ROLE docker WITH ENCRYPTED PASSWORD 'docker' LOGIN;
 COMMENT ON ROLE docker IS 'docker user for tests';
 
